@@ -5,6 +5,7 @@ var io = require('socket.io')(server);
 var ejs = require('ejs');
 //middleware includes
 var home = require("./routes/home");
+var userIds = [];
 
 app.enable('verbose errors');
 require('events').EventEmitter.defaultMaxListeners = 0;
@@ -18,11 +19,18 @@ app.use(express.json());
 app.use('/', home);
 
 io.on('connection', function (socket) {
+  //add user to the array list
+  userIds.push(socket.id);
 
-  console.log(`A user has connected with the id: ${socket.id}`);
+  socket.on('createKingdom', function(name, icon, posX, posY) {
+    console.log(`Name: ${name}\nIcon:${icon}\nposX: ${posX}\nposY: ${posY}`);
+  });
 
-  socket.on('disconnect', function(){
-    console.log('user disconnected');
+  socket.on('disconnect', async function(){
+    //remove user from id array
+    //run async to save cpu cycles on the main thread.
+    let arrayPosition = await userIds.indexOf(socket.id);
+    userIds.splice(arrayPosition, 1);
   });
 
 });
