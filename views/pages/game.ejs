@@ -1,0 +1,10 @@
+game
+
+<script src="/socket.io/socket.io.js"></script>
+<script>
+  var socket = io();
+  io.connect("http://localhost:8000/game");
+  function test() {
+    socket.emit('createKingdom', "test", "icon", 5, 5);
+  }
+</script>
