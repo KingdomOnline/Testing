@@ -5,6 +5,7 @@ var mainDb = new sqlite.Database("./private/main.db");
 // use res.render to load up an ejs view file
 
 //test data
+// TODO: make map data come from mysql db. 
 var pointData = {
   "kingdoms": [
     {name: "test", posX: 100, posY: 240, icon: "this icon", population: 100000, troops: 1000, forts: 10},
