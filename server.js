@@ -1,11 +1,13 @@
-var express = require('express');
-var app = require('express')();
-var server = require('http').createServer(app);
-var io = require('socket.io')(server);
-var ejs = require('ejs');
+const express = require('express');
+const app = require('express')();
+const server = require('http').createServer(app);
+const io = require('socket.io')(server);
+const ejs = require('ejs');
+
 //middleware includes
 var home = require("./routes/home");
-var game = require("./routes/game")
+var game = require("./routes/game");
+var map = require("./routes/map");
 var userIds = [];
 
 app.enable('verbose errors');
@@ -19,6 +21,7 @@ app.use(express.json());
 
 app.use('/', home);
 app.use('/game', game);
+app.use('/map', map)
 
 //io connection when the user connects to the /game route
 io.of("/game").on('connection', function (socket) {

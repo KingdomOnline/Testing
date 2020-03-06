@@ -1,0 +1,31 @@
+
+<canvas id="game" width="1000" height="500" style="border: 2px solid black; margin: auto; display: flex;"></canvas>
+
+<script type="text/javascript">
+    function sortMapData(data) {
+      for (var i = 0; i < data.kingdoms.length; i++) {
+        var kingdom = data.kingdoms[i];
+        console.log(kingdom);
+      }
+    }
+
+    sortMapData(<%- points %>);
+</script>
+<script>
+  const canvas = document.getElementById("game");
+  const ctx = canvas.getContext("2d");
+
+  let height = 50;
+  let width = 50;
+
+  function drawMapData(data) {
+    for (var i = 0; i < data.kingdoms.length; i++) {
+      var kingdom = data.kingdoms[i];
+      ctx.rect(kingdom.posX, kingdom.posY, width, height);
+      ctx.stroke();
+    }
+  }
+
+  drawMapData(<%- points %>);
+
+</script>
