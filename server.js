@@ -1,14 +1,9 @@
 const express = require('express');
-const app = require('express')();
-const server = require('http').createServer(app);
-const io = require('socket.io')(server);
+const app = express();
 const ejs = require('ejs');
 
 //middleware includes
 var home = require("./routes/home");
-var game = require("./routes/game");
-var map = require("./routes/map");
-var userIds = [];
 
 //mysql
 var mysql = require('mysql');
@@ -36,29 +31,7 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.json());
 
 app.use('/', home);
-app.use('/game', game);
-app.use('/map', map)
 
-//io connection when the user connects to the /game route
-io.of("/game").on('connection', function (socket) {
-  //add user to the array list
-  userIds.push(socket.id);
-  console.log('join');
-
-  socket.on('createKingdom', function(name, icon, posX, posY) {
-    console.log(`Name: ${name}\nIcon:${icon}\nposX: ${posX}\nposY: ${posY}`);
-  });
-
-  socket.on('disconnect', async function(){
-
-    console.log('leave');
-    //remove user from id array
-    //run async to save cpu cycles on the main thread.
-    let arrayPosition = await userIds.indexOf(socket.id);
-    userIds.splice(arrayPosition, 1);
-  });
-
-});
 
 
 /*
@@ -77,4 +50,4 @@ app.use(function(error, req, res, next) {
   res.status(500).send('500: Internal Server Error');
 });
 
-server.listen(8000);
+app.listen(8000);
