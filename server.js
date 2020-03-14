@@ -10,6 +10,22 @@ var game = require("./routes/game");
 var map = require("./routes/map");
 var userIds = [];
 
+//mysql
+var mysql = require('mysql');
+
+var con = mysql.createConnection({
+  host: "localhost",
+  user: "website",
+  password: "IU*(&THHGkjhgfkjg&",
+  database: "kingsroyale"
+});
+
+con.connect(function(err) {
+  if (err) throw err;
+  console.log("Successfully connected to the database!");
+});
+
+
 app.enable('verbose errors');
 require('events').EventEmitter.defaultMaxListeners = 0;
 app.set('view engine', 'ejs');
