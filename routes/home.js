@@ -1,7 +1,5 @@
 const express = require('express');
 const router = express.Router();
-const sqlite = require('sqlite3').verbose();
-var mainDb = new sqlite.Database("./private/main.db");
 // use res.render to load up an ejs view file
 
 router.get('/', function(req, res) {
@@ -10,6 +8,10 @@ router.get('/', function(req, res) {
 
 router.get('/test', function(req, res) {
   res.send("hello");
+})
+
+router.get('/profile', function(req, res) {
+  res.render("pages/profile");
 })
 
 module.exports = router

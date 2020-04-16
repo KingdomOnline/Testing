@@ -1,0 +1,21 @@
+html {
+  overflow-x: hidden;
+}
+
+body {
+  background-color: #333;
+  color: white;
+}
+
+hr {
+  border: 2px solid white;
+}
+
+.box-username {
+  border-radius: 20px;
+  background-color: #586975;
+}
+
+.username {
+  font-size: 28px;
+}
