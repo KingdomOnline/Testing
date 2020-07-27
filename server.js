@@ -5,21 +5,6 @@ const ejs = require('ejs');
 //middleware includes
 var home = require("./routes/home");
 
-//mysql
-var mysql = require('mysql');
-
-var con = mysql.createConnection({
-  host: "localhost",
-  user: "website",
-  password: "IU*(&THHGkjhgfkjg&",
-  database: "kingsroyale"
-}); 
-
-con.connect(function(err) {
-  if (err) throw err;
-  console.log("Successfully connected to the database!");
-});
-
 
 app.enable('verbose errors');
 require('events').EventEmitter.defaultMaxListeners = 0;
@@ -40,7 +25,7 @@ ERROR HANDLING DO NOT PUT ANYTHING BELOW THIS CODE
 ==================
 */
 
-/* 
+/*
  // Handle 404
 app.use(function(req, res) {
   res.status(404).send('404: Page not Found');
