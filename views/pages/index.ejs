@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head> 
+    <head>
         <%- include('../partials/head') -%>
-    </head> 
+    </head>
 <body class="container-fluid px-0">
 
 <header>
@@ -11,7 +11,7 @@
 <div class="top-picture"></div>
 <main class="container-fluid bg-dark text-light mb-0 py-1">
     <div class="row m-5 justify-content-center">
-        <div class="col-md-6 card bg-gray box-shadow"> 
+        <div class="col-md-6 card bg-gray box-shadow">
                 <div class="card-body ext-white">
                 <h4 class="card-title box-shadow text-center h-md-100">
                     News
@@ -37,8 +37,8 @@
                 </div>
             </div>
         </div>
-        <div class="col-md-3">  
-            <div class="card bg-gray box-shadow"> 
+        <div class="col-md-3">
+            <div class="card bg-gray box-shadow">
                 <div class="card-body text-white">
                 <h4 class="card-title box-shadow text-center h-md-100">
                     Quick Links
@@ -47,21 +47,27 @@
 
                 </h4>
                 <div class="card-text text-white text-justify">
-                
+
 				<ul class="links">
 					<li class="link-item">Link 1</li>
 					<li class="link-item">Link 2</li>
 				</ul>
-				
+
 				</div>
             </div>
         </div>
         </div>
     </div>
-</main> 
- 
+</main>
+
  <footer>
     <%- include('../partials/footer') -%>
+
+    <script>
+      var navbar = document.getElementById("navbar");
+      navbar.classList.add('fixed-top');
+    </script>
+
 </footer>
 </body>
 </html>
