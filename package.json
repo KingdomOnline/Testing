@@ -1,10 +1,11 @@
 {
   "name": "testing",
-  "version": "1.0.0",
-  "description": "testing for kingdoms online",
+  "version": "1.1.0",
+  "description": "Testing for kingdoms online",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node server.js",
+    "startdev": "nodemon --inspect ./server.js localhost 8000"
   },
   "repository": {
     "type": "git",
@@ -12,9 +13,9 @@
   },
   "keywords": [
     "kingdoms",
-    "kingdoms",
+    "fun",
     "online",
-    "online",
+    "game",
     "rpg"
   ],
   "author": "Kingdoms Online Developer Team",
@@ -29,5 +30,8 @@
     "mysql": "^2.18.1",
     "npm": "^6.14.6",
     "sqlite3": "^4.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
   }
 }

@@ -1,73 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <%- include('../partials/head') -%>
-    </head>
-<body class="container-fluid px-0">
+<html class="h-100" lang="en">
 
-<header>
-    <%- include('../partials/header') -%>
-</header>
-<div class="top-picture"></div>
-<main class="container-fluid bg-dark text-light mb-0 py-1">
-    <div class="row m-5 justify-content-center">
-        <div class="col-md-6 card bg-gray box-shadow">
-                <div class="card-body ext-white">
-                <h4 class="card-title box-shadow text-center h-md-100">
-                    News
+<head>
+    <%- include('../partials/head') -%>
+</head>
 
-					<hr>
+<body class="container-fluid h-100 m-0">
 
-                </h4>
-                <div class="card-text text-white text-justify">
-                <p>2Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusamus autem voluptates facere dignissimos, magni dolorem hic laborum ipsa aliquam, suscipit vitae reiciendis officiis eius debitis quod ad doloribus architecto.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nesciunt eaque, delectus ut totam corporis similique doloribus accusamus, tempora unde pariatur fuga recusandae quibusdam reiciendis velit rem itaque laborum officiis.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusamus autem voluptates facere dignissimos, magni dolorem hic laborum ipsa aliquam, suscipit vitae reiciendis officiis eius debitis quod ad doloribus architecto.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nesciunt eaque, delectus ut totam corporis similique doloribus accusamus, tempora unde pariatur fuga recusandae quibusdam reiciendis velit rem itaque laborum officiis.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusamus autem voluptates facere dignissimos, magni dolorem hic laborum ipsa aliquam, suscipit vitae reiciendis officiis eius debitis quod ad doloribus architecto.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nesciunt eaque, delectus ut totam corporis similique doloribus accusamus, tempora unde pariatur fuga recusandae quibusdam reiciendis velit rem itaque laborum officiis.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusamus autem voluptates facere dignissimos, magni dolorem hic laborum ipsa aliquam, suscipit vitae reiciendis officiis eius debitis quod ad doloribus architecto.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nesciunt eaque, delectus ut totam corporis similique doloribus accusamus, tempora unde pariatur fuga recusandae quibusdam reiciendis velit rem itaque laborum officiis.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusamus autem voluptates facere dignissimos, magni dolorem hic laborum ipsa aliquam, suscipit vitae reiciendis officiis eius debitis quod ad doloribus architecto.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nesciunt eaque, delectus ut totam corporis similique doloribus accusamus, tempora unde pariatur fuga recusandae quibusdam reiciendis velit rem itaque laborum officiis.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusamus autem voluptates facere dignissimos, magni dolorem hic laborum ipsa aliquam, suscipit vitae reiciendis officiis eius debitis quod ad doloribus architecto.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nesciunt eaque, delectus ut totam corporis similique doloribus accusamus, tempora unde pariatur fuga recusandae quibusdam reiciendis velit rem itaque laborum officiis.</p>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusamus autem voluptates facere dignissimos, magni dolorem hic laborum ipsa aliquam, suscipit vitae reiciendis officiis eius debitis quod ad doloribus architecto.</p>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nesciunt eaque, delectus ut totam corporis similique doloribus accusamus, tempora unde pariatur fuga recusandae quibusdam reiciendis velit rem itaque laborum officiis.</p>
+    <header class="fixed-top">
+        <%- include('../partials/header') -%>
+    </header>
+    
+    <div class="top-picture mt-5 "></div>
+
+    <main class="container-fluid bg-dark text-light m-0 py-2">
+
+        <div class="row m-5 justify-content-center">
+
+            <div class="col-sm-12 col-md-4 mb-5">
+                <div class="card bg-gray box-shadow">
+                    <div class="card-body text-white">
+                        <h4 class="card-title box-shadow text-center h-md-100">
+                            Quick Links
+                            <hr>
+                        </h4>
+                        <div class="card-text text-white text-justify">
+                            <ul class="links p-0 text-center justify-content-center">
+                                <a class="link-item btn btn-dark text-light box-shadow" data-toggle="collapse"
+                                    href="#news" role="button" aria-expanded="false"
+                                    aria-controls="news">News</a>
+                                <li class="link-item m-auto">Link 2</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-12 col-md-8 card bg-gray box-shadow mb-5 multi-collapse collapse" id="news">
+                <div class="card-body text-white">
+                    <h4 class="card-title box-shadow text-center h-md-100">
+                        News
+                        <hr>
+                    </h4>
+                    <div class="card-text text-white text-justify">
+                        <p>2Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusamus autem
+                            voluptates facere dignissimos, magni dolorem hic laborum ipsa aliquam, suscipit vitae
+                            reiciendis officiis eius debitis quod ad doloribus architecto.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nesciunt eaque, delectus
+                            ut
+                            totam corporis similique doloribus accusamus, tempora unde pariatur fuga recusandae
+                            quibusdam reiciendis velit rem itaque laborum officiis.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusamus autem
+                            voluptates facere dignissimos, magni dolorem hic laborum ipsa aliquam, suscipit vitae
+                            reiciendis officiis eius debitis quod ad doloribus architecto.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nesciunt eaque, delectus
+                            ut
+                            totam corporis similique doloribus accusamus, tempora unde pariatur fuga recusandae
+                            quibusdam reiciendis velit rem itaque laborum officiis.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusamus autem
+                            voluptates facere dignissimos, magni dolorem hic laborum ipsa aliquam, suscipit vitae
+                            reiciendis officiis eius debitis quod ad doloribus architecto.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nesciunt eaque, delectus
+                            ut
+                            totam corporis similique doloribus accusamus, tempora unde pariatur fuga recusandae
+                            quibusdam reiciendis velit rem itaque laborum officiis.</p>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Explicabo accusamus autem
+                            voluptates facere dignissimos, magni dolorem hic laborum ipsa aliquam, suscipit vitae
+                            reiciendis officiis eius debitis quod ad doloribus architecto.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta nesciunt eaque, delectus
+                            ut
+                            totam corporis similique doloribus accusamus, tempora unde pariatur fuga recusandae
+                            quibusdam reiciendis velit rem itaque laborum officiis.</p>
+                    </div>
                 </div>
             </div>
         </div>
-        <div class="col-md-3">
-            <div class="card bg-gray box-shadow">
-                <div class="card-body text-white">
-                <h4 class="card-title box-shadow text-center h-md-100">
-                    Quick Links
+    </main>
 
-					<hr>
-
-                </h4>
-                <div class="card-text text-white text-justify">
-
-				<ul class="links">
-					<li class="link-item">Link 1</li>
-					<li class="link-item">Link 2</li>
-				</ul>
-
-				</div>
-            </div>
-        </div>
-        </div>
-    </div>
-</main>
-
- <footer>
-    <%- include('../partials/footer') -%>
-
-    <script>
-      var navbar = document.getElementById("navbar");
-      navbar.classList.add('fixed-top');
-    </script>
-
-</footer>
+    <footer class="">
+        <%- include('../partials/footer') -%> 
+    </footer>
 </body>
+
 </html>

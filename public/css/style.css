@@ -5,7 +5,9 @@
 --black-color:#343a40 ;
 /*--border-r:0.3rem;*/
 }
-
+html,body{ 
+    min-height: 100%;
+}
 hr {
     border: 2px solid white;
     border-color: white;
@@ -28,13 +30,11 @@ hr {
 
 /** Navbar **/
 
-.bg-brand-container{      
-
+.bg-brand-container{       
     padding: 0.1rem;
 } 
 .bg-brand { 
-    background:var(--black-color); 
-    padding:0.5rem 0.5rem;
+    background:var(--black-color);  
 }
 .bg-brand:hover{ 
     filter:drop-shadow(0.1rem 0.1rem 0.1rem #555); 
@@ -46,7 +46,7 @@ hr {
    background-size: cover;/*100%*/ 
    background-position: center center;   
    width:100%;
-   height:25vw;
+   height:20vw;
    display:block;   
    background-attachment: fixed;
    /*border-radius:0.2rem;*/
@@ -54,9 +54,7 @@ hr {
 .bg-gray{
     background-color: rgb(74, 73, 85);
 }
-
  
-    
 /*
 @media only screen and (max-width:992px){
     .mr-lg-50{
